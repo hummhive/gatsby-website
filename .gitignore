@@ -68,6 +68,7 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+injectables/
 hummhive-extensions.json
 hummhive-theme.json
 hummhive-data.json
