@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import Container from "../components/container"
 
 const Extension = ({ pageContext }) => {
   const divRef = React.useRef<HTMLDivElement>(null)
@@ -24,9 +25,9 @@ const Extension = ({ pageContext }) => {
   }
 
   return (
-    <Layout>
+    <Container>
       <div ref={divRef}></div>
-    </Layout>
+    </Container>
   )
 }
 

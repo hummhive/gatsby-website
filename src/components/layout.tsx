@@ -1,21 +1,25 @@
 import React from "react"
 import Header from "./Header"
-import { Container } from "./styled"
+import GlobalStyle from "./globalstyles"
+import { ThemeProvider } from "styled-components";
 
 const Layout = ({ children }) => {
+  const [theme, setTheme] = React.useState(window.hummhiveApi.theme.light)
+  const onThemeChangeHandler = () => {
+    if(theme !== window.hummhiveApi.theme.light){
+      setTheme(window.hummhiveApi.theme.light);
+    }else{
+      setTheme(window.hummhiveApi.theme.dark);
+    }
+  }
   return (
-    <Container>
-      <Header />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Header onThemeChangeHandler={onThemeChangeHandler} />
+      <div>
         <main>{children}</main>
       </div>
-    </Container>
+    </ThemeProvider>
   )
 }
 
