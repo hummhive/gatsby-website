@@ -7,6 +7,7 @@
   "dependencies": {
     "@fontsource/muli": "^4.1.0",
     "@fontsource/noto-serif-jp": "^4.5.12",
+    "@fontsource/work-sans": "^4.5.12",
     "@hummhive/saltpack": "^1.10.0",
     "@msgpack/msgpack": "^2.7.2",
     "gatsby": "^4.19.2",
