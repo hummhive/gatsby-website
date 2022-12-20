@@ -48,6 +48,37 @@ a:hover{
 	bottom: -4px;
 }
 
+.link{
+  cursor: pointer;
+}
+
+.post-title{
+  font-weight: 600;
+  font-size: 29px;
+  margin-bottom: 0px;
+  color: rgb(41, 41, 41);
+  }
+
+  .meta{
+    font-size: 13px;
+    color: rgb(117, 117, 117);
+    text-transform: capitalize;
+  }
+
+  input {
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-radius: 4px;
+	margin-right: 10px;
+}
+
+button{
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #ccc;
+  border-radius: 4px;
+}
+
 `;
 
 export default GlobalStyle;

@@ -11,7 +11,7 @@ export const Header = styled.div`
   overflow: hidden;
   z-index: 9999;
   justify-content: space-between;
-  padding: 12px 12px 12px 0px;
+  padding: 12px 12px 0px 0px;
   margin-bottom: 40px;
 `
 

@@ -1,16 +1,20 @@
 import React from "react"
+import { Link } from "gatsby"
 import hummhiveExtentsions from "../../../hummhive-extensions.json"
 import NavItem from "./NavItem"
 import Container from "../Container"
 import { Header, HeaderContainer, Logo, Navigation } from "./styled"
 
 export default ({onThemeChangeHandler}) => {
+        {console.log(window.hummhiveApi)}
   return (
     <Header>
     <Container>
     <HeaderContainer>
       <Logo>
-        HummHive Official
+      <Link to="/">
+        {window.hummhiveApi.hiveData.hiveId}
+      </Link>
       </Logo>
       <Navigation>
         <NavItem slug="/">Home</NavItem>
@@ -19,9 +23,6 @@ export default ({onThemeChangeHandler}) => {
             {extension.pageName}
           </NavItem>
         ))}
-        <button onClick={onThemeChangeHandler}>
-        as
-        </button>
       </Navigation>
     </HeaderContainer>
             </Container>
