@@ -6,14 +6,13 @@ import Container from "../Container"
 import { Header, HeaderContainer, Logo, Navigation } from "./styled"
 
 export default ({onThemeChangeHandler}) => {
-        {console.log(window.hummhiveApi)}
   return (
     <Header>
     <Container>
     <HeaderContainer>
       <Logo>
       <Link to="/">
-        {window.hummhiveApi.hiveData.hiveId}
+        {window.hummhiveApi.hiveData.hiveName}
       </Link>
       </Logo>
       <Navigation>

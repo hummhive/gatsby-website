@@ -11,6 +11,7 @@ export default {
   theme,
   hiveData: {
     hiveId: hiveData.hiveId,
+    hiveName: hiveData.hiveName,
     getAdminPublicKeys: () => hiveData.adminPublicKeys,
     isNotifyCellInstalled: hiveData.isNotifyCellInstalled,
   },
