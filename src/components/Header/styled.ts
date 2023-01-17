@@ -13,6 +13,9 @@ export const Header = styled.div`
   justify-content: space-between;
   padding: 12px 12px 0px 0px;
   margin-bottom: 40px;
+  a{
+    color: ${props => props.theme.onBackground};
+  }
 `
 
 export const HeaderContainer = styled.div`

@@ -6,6 +6,8 @@ body {
   color: ${props => props.theme.onBackground};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
 }
 
 h1,
