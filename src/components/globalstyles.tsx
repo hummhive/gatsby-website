@@ -58,14 +58,33 @@ a:hover{
   font-weight: 600;
   font-size: 29px;
   margin-bottom: 0px;
-  color: rgb(41, 41, 41);
+  color: ${props => props.theme.onBackground};
   }
 
   .meta{
     font-size: 13px;
     color: rgb(117, 117, 117);
     text-transform: capitalize;
+    display: flex;
   }
+
+  .meta div {
+	padding-right: 15px;
+	font-size: 16px;
+	color: rgb(117, 117, 117);
+}
+
+  .post .meta div {
+	font-size: 13px;
+}
+
+.meta > :not(:last-child)::after {
+	content: "•";
+	margin-left: 5px;
+	position: absolute;
+	display: inline-block;
+	font-weight: 700;
+}
 
   input {
 	border: 1px solid #ddd;
@@ -79,6 +98,45 @@ button{
   border: 1px solid #ddd;
   background: #ccc;
   border-radius: 4px;
+}
+
+.post-title h1{
+  margin: 0;
+    color: ${props => props.theme.onBackground};
+}
+
+#hummhive-core-user-management-root{
+margin: auto;
+max-width: 960px;
+text-align: center;
+background: ${props => props.theme.primaryContainer};
+padding: 20px;
+border-radius: 10px;onPrimaryContainer
+display: flex;
+color: ${props => props.theme.onPrimaryContainer};
+flex-direction: column;
+}
+
+#hummhive-core-user-management-root .page-heading{
+  margin: 0;
+  color: ${props => props.theme.onPrimaryContainer};
+}
+
+#hummhive-core-user-management-root input[type=text] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#hummhive-core-user-management-root .primary-btn {
+	padding: 10px;
+	border: 1px solid #ddd;
+    background: ${props => props.theme.primary};
+	border-radius: 4px;
+	margin-top: 25px;
+	width: 250px;
+	margin: auto;
+  color: ${props => props.theme.onPrimary};
+	margin-top: 20px;
 }
 
 `;

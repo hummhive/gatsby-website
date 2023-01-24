@@ -17,11 +17,14 @@ export default ({onThemeChangeHandler}) => {
       </Logo>
       <Navigation>
         <NavItem slug="/">Home</NavItem>
-        {hummhiveExtentsions.map(extension => (
+        {hummhiveExtentsions.map(extension => {
+          if(extension.isDefault)
+          return(
           <NavItem key={extension.baseRoute} slug={`${extension.baseRoute}`}>
             {extension.pageName}
           </NavItem>
-        ))}
+        )})}
+        <button onClick={onThemeChangeHandler}>Test</button>
       </Navigation>
     </HeaderContainer>
             </Container>

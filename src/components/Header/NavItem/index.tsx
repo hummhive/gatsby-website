@@ -1,11 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
-import { NavLinkContainer } from "./styled"
+import { useLocation } from '@reach/router';
+import { NavLinkContainer, StyledLink } from "./styled"
 
-export default ({ slug, children }) => {
+export default ({ slug, children, isActive }) => {
+  const location = useLocation();
   return (
     <NavLinkContainer>
-      <Link to={slug}>{children}</Link>
+      <StyledLink isActive={location.pathname == slug} to={slug}>{children}</StyledLink>
     </NavLinkContainer>
   )
 }

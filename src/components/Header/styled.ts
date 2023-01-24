@@ -6,16 +6,13 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid ${props => props.theme.outline};
+  border-bottom: 1px solid ${props => props.theme.surfaceVariant};
   height: 64.3px;
   overflow: hidden;
   z-index: 9999;
   justify-content: space-between;
   padding: 12px 12px 0px 0px;
   margin-bottom: 40px;
-  a{
-    color: ${props => props.theme.onBackground};
-  }
 `
 
 export const HeaderContainer = styled.div`
@@ -36,6 +33,9 @@ cursor: pointer;
 flex: 1 1 0px;
 font-weight: 600;
 font-size: 20px;
+a{
+  color: ${props => props.theme.onBackground};
+}
 `
 
 export const Navigation = styled.div`

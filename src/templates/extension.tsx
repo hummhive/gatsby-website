@@ -1,17 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
-import Container from "../components/container"
 
 const Extension = ({ pageContext }) => {
   const divRef = React.useRef<HTMLDivElement>(null)
-
   React.useEffect(() => {
     init()
   }, [])
 
   const init = async () => {
     if (!divRef.current) return
-    console.log(pageContext)
     const _module = await import(
       // @ts-ignore
       `!!raw-loader!../../injectables/UIs/${pageContext.id}/index.html`
@@ -25,9 +22,7 @@ const Extension = ({ pageContext }) => {
   }
 
   return (
-    <Container>
       <div ref={divRef}></div>
-    </Container>
   )
 }
 

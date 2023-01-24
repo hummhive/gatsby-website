@@ -1,5 +1,7 @@
 import React from "react"
 import Header from "./Header"
+import Container from "../components/container"
+import Footer from "./Footer"
 import GlobalStyle from "./globalstyles"
 import { ThemeProvider } from "styled-components";
 
@@ -16,9 +18,10 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header onThemeChangeHandler={onThemeChangeHandler} />
-      <div>
+      <Container>
         <main>{children}</main>
-      </div>
+      </Container>
+      <Footer />
     </ThemeProvider>
   )
 }

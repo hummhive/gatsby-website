@@ -1,8 +1,12 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const NavLinkContainer = styled.div`
   padding: 0 16px;
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 700;
+  font-size: 16px;
   font-family: "Work Sans";
+`
+export const StyledLink = styled(Link)`
+  color: ${props => props.isActive ? props.theme.primary : props.theme.onBackground};
 `
