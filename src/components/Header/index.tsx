@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import hummhiveExtentsions from "../../../hummhive-extensions.json"
 import NavItem from "./NavItem"
+
 import Container from "../Container"
 import { Header, HeaderContainer, Logo, Navigation } from "./styled"
 
@@ -24,7 +25,6 @@ export default ({onThemeChangeHandler}) => {
             {extension.pageName}
           </NavItem>
         )})}
-        <button onClick={onThemeChangeHandler}>Test</button>
       </Navigation>
     </HeaderContainer>
             </Container>
