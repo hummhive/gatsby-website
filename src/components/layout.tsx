@@ -6,18 +6,18 @@ import GlobalStyle from "./globalstyles"
 import { ThemeProvider } from "styled-components";
 
 const Layout = ({ children }) => {
-  const [theme, setTheme] = React.useState(window.hummhiveApi.theme.light)
+  const [theme, setTheme] = React.useState(window.hummhiveApi.hiveData.theme.light)
   const onThemeChangeHandler = () => {
-    if(theme !== window.hummhiveApi.theme.light){
-      setTheme(window.hummhiveApi.theme.light);
+    if(theme !== window.hummhiveApi.hiveData.theme.light){
+      setTheme(window.hummhiveApi.hiveData.theme.light);
     }else{
-      setTheme(window.hummhiveApi.theme.dark);
+      setTheme(window.hummhiveApi.hiveData.theme.dark);
     }
   }
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header onThemeChangeHandler={onThemeChangeHandler} />
+      <Header onThemeChangeHandler={onThemeChangeHandler} theme={theme} />
       <Container>
         <main>{children}</main>
       </Container>

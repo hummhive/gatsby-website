@@ -19,9 +19,9 @@ export default ({onThemeChangeHandler}) => {
       <Navigation>
         <NavItem slug="/">Home</NavItem>
         {hummhiveExtentsions.map(extension => {
-          if(extension.isDefault)
+          if(!extension.isHomepage)
           return(
-          <NavItem key={extension.baseRoute} slug={`${extension.baseRoute}`}>
+          <NavItem key={extension.slug} slug={`${extension.slug}`}>
             {extension.pageName}
           </NavItem>
         )})}

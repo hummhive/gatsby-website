@@ -4,16 +4,16 @@ import getJsonData from "../../injectables/functions/contentDelivery/getJsonData
 import getBlob from "../../injectables/functions/contentDelivery/getBlob"
 import getSchemaIndex from "../../injectables/functions/contentDelivery/getSchemaIndex"
 import setInboxEntry from "../../injectables/functions/contentDelivery/setInboxEntry"
-import theme from "../../hummhive-theme.json"
 import hiveData from "../../hummhive-data.json"
 
 export default {
-  theme,
   hiveData: {
     hiveId: hiveData.hiveId,
     hiveName: hiveData.hiveName,
+    theme: hiveData.theme,
     getAdminPublicKeys: () => hiveData.adminPublicKeys,
-    isNotifyCellInstalled: hiveData.isNotifyCellInstalled,
+    configuredCells: hiveData.configuredCells,
+    extensions: hiveData.extensions
   },
   crypto: {
     encrypt,
