@@ -12,9 +12,9 @@ export default ({onThemeChangeHandler}) => {
     <Container>
     <HeaderContainer>
       <Logo>
-      <Link to="/">
+      <NavItem slug="/">
         {window.hummhiveApi.hiveData.hiveName}
-      </Link>
+      </NavItem>
       </Logo>
       <Navigation>
         <NavItem slug="/">Home</NavItem>
