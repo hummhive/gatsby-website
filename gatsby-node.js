@@ -2,9 +2,12 @@ const pageExtensions = require("./hummhive-extensions.json")
 
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions
+
   if (!pageExtensions) return
 
-  pageExtensions.forEach(ext => {
+  const filteredPages = pageExtensions.filter(extension => !extension.isHomepage);
+
+  filteredPages.forEach(ext => {
     const page = {
       path: ext.slug,
       matchPath: `${ext.slug}/*`,
@@ -28,12 +31,12 @@ exports.onCreatePage = ({ page, actions }) => {
 
   deletePage({
     path: '/',
+    matchPath: `/`,
     component: indexPageComponentPath,
   });
 
   createPage({
     path: '/',
-    matchPath: `/`,
     component: require.resolve("./src/templates/extension.tsx"),
     context: defaultPage,
     });
