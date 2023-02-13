@@ -10,6 +10,8 @@ export default {
   hiveData: {
     hiveId: hiveData.hiveId,
     hiveName: hiveData.hiveName,
+    hiveDescription: hiveData.hiveDescription,
+    hiveJoinText: hiveData.hiveJoinText,
     theme: hiveData.theme,
     getAdminPublicKeys: () => hiveData.adminPublicKeys,
     configuredCells: hiveData.configuredCells,
