@@ -101,6 +101,8 @@ button{
 }
 
 .post-title h1{
+  font-weight: 600;
+  font-size: 29px;
   margin: 0;
     color: ${props => props.theme.onBackground};
 }
