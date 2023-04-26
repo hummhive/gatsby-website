@@ -78,6 +78,10 @@ a:hover{
 	font-size: 13px;
 }
 
+.post {
+	margin-bottom: 30px;
+}
+
 .meta > :not(:last-child)::after {
 	content: "•";
 	margin-left: 5px;

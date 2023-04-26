@@ -5,6 +5,9 @@ export const NavLinkContainer = styled.div`
   font-weight: 700;
   font-size: 16px;
   font-family: "Work Sans";
+  a{
+    color: ${props => props.theme.onBackground};
+  }
 `
 export const StyledLink = styled.a`
   color: #000;
