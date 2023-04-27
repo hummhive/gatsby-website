@@ -97,6 +97,10 @@ a:hover{
 	margin-right: 10px;
 }
 
+.summary{
+  font-family: "Noto Serif JP";
+}
+
 button{
   padding: 10px;
   border: 1px solid #ddd;
@@ -106,6 +110,7 @@ button{
 
 .post-title h1{
   font-weight: 600;
+  font-family: "Noto Serif JP";
   font-size: 29px;
   margin: 0;
     color: ${props => props.theme.onBackground};
@@ -143,6 +148,28 @@ flex-direction: column;
 	margin: auto;
   color: ${props => props.theme.onPrimary};
 	margin-top: 20px;
+}
+
+@media screen and (max-width: 520px) {
+  .post-title h1{
+    font-size: 20px;
+  }
+  #hummhive-stories-root {
+  }
+  .summary {
+    font-family: "Noto Serif JP";
+    font-size: 18px;
+  }
+
+  .page-heading span {
+    position: relative;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .hide{
+    display: none;
+  }
 }
 
 `;

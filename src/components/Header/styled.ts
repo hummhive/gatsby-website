@@ -44,3 +44,14 @@ export const Navigation = styled.div`
   justify-content: flex-end;
   flex: 1 1 0px;
 `
+
+export const NavLinkExternal = styled.div`
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Work Sans";
+  a{
+    color: ${props => props.theme.onBackground};
+  }
+`
+

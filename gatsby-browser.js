@@ -4,6 +4,8 @@ import "@fontsource/work-sans"
 import "@fontsource/work-sans/600.css";
 import "@fontsource/work-sans/700.css";
 import "@fontsource/noto-serif-jp"
+import "@fontsource/noto-serif-jp/600.css"
+import "@fontsource/noto-serif-jp/700.css"
 import Layout from "./src/components/layout"
 import api from "./src/api"
 window.hummhiveApi = api
