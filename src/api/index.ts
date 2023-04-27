@@ -1,5 +1,6 @@
 import encrypt from "../../injectables/functions/core/encrypt"
 import tryDecrypt from "../../injectables/functions/core/tryDecrypt"
+import tryDecryptWithSecret from "../../injectables/functions/core/tryDecryptWithSecret"
 import getJsonData from "../../injectables/functions/contentDelivery/getJsonData"
 import getBlob from "../../injectables/functions/contentDelivery/getBlob"
 import getSchemaIndex from "../../injectables/functions/contentDelivery/getSchemaIndex"
@@ -15,11 +16,12 @@ export default {
     theme: hiveData.theme,
     getAdminPublicKeys: () => hiveData.adminPublicKeys,
     configuredCells: hiveData.configuredCells,
-    extensions: hiveData.extensions
+    extensions: hiveData.extensions,
   },
   crypto: {
     encrypt,
     tryDecrypt,
+    tryDecryptWithSecret,
   },
   contentDelivery: {
     getJsonData,

@@ -2,6 +2,9 @@
 logs
 *.log
 npm-debug.log*
+.yarn
+.yarnrc.yml
+yarn.lock
 yarn-debug.log*
 yarn-error.log*
 
@@ -68,6 +71,7 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+static/
 injectables/
 hummhive-extensions.json
 hummhive-theme.json
